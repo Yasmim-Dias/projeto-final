@@ -1,7 +1,7 @@
 // ------------------------------
 // CONFIG: ajuste a porta do backend aqui
 // ------------------------------
-const API_URL = "http://localhost:3000";  // se mudou a porta, ALTERE AQUI
+const API_URL = "http://localhost:3000/usuarios-com-cartoes";  
 
 // ------------------------------
 // CADASTRAR USUÁRIO
