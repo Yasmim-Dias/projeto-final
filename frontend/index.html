@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bookoffe - Cadastro</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<main class="container">
+
+<header class="site-header">
+<div class="container header-inner">
+<!-- Logo em imagem horizontal -->
+<a class="brand" href="home.html">
+<img src="images/flor.png" alt="Bookoffee" style="height:100px;">
+</a>
+<button id="btn-menu" class="menu-toggle" aria-label="Abrir menu">☰</button>
+<nav id="main-nav" class="main-nav">
+<a href="home.html" data-link>Home</a>
+<a href="sobre.html" data-link>Sobre</a>
+<a href="index.html" data-link>Cadastro</a>
+<a href="menu.html" data-link>Cardápio</a>
+<a href="eventos.html" data-link>Eventos</a>
+<a href="contato.html" data-link>Contato</a>
+</nav>
+</div>
+</header>
+
+<h1>Bookoffe</h1>
+<p>Cadastre-se e registre seu cartão para alugar livros e participar dos eventos.</p>
+
+<section class="card">
+<h2>Cadastrar Usuário</h2>
+<form id="form-usuario">
+<input id="nome" placeholder="Nome completo" required />
+<input id="telefone" placeholder="Telefone" required />
+<input id="email" placeholder="E-mail" type="email" required />
+<input id="endereco" placeholder="Endereço" required />
+<button type="submit">Cadastrar usuário</button>
+</form>
+</section>
+
+
+<section class="card">
+<h2>Registrar Cartão</h2>
+<form id="form-cartao">
+<input id="numero" placeholder="Número do cartão" required />
+<input id="validade" placeholder="Validade (MM/AA)" required />
+<input id="cvv" placeholder="CVV" required />
+<input id="id_usuario" placeholder="ID do usuário (ex: 1)" required />
+<button type="submit">Salvar cartão</button>
+</form>
+</section>
+
+
+<section class="card">
+<h2>Usuários e Cartões</h2>
+<div id="mensagem"></div>
+<ul id="lista-dados" class="lista"></ul>
+</section>
+
+
+<footer>
+<small>Projeto Bookoffe — Programação III</small>
+</footer>
+</main>
+
+
+<script src="app.js" defer></script>
+</body>
+</html>
