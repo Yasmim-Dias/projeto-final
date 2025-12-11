@@ -1,45 +1,73 @@
+=======================================================
+CRIAR USUÁRIO
+=======================================================
 ###
-# =======================================================
-# TESTES PARA A API DE AVENTUREIROS
-# =======================================================
-# Use a extensão "REST Client" do VSCode para executar estas requisições.
-# A separação "###" permite executar cada bloco individualmente.
-# =======================================================
+POST http://localhost:3000/usuarios
 
-###
-# 1. CRIAR um novo aventureiro (POST)
-# Rota para criar um novo aventureiro.
-# O servidor deve responder com status 201 (Created).
-POST http://localhost:3000/aventureiro HTTP/1.1
 Content-Type: application/json
 
 {
-    "id": 4,
-    "nome": "Bernardo, O Aventureiro",
-    "classe": "Guerreiro"
+"nome": "dias",
+"telefone": "54666232730",
+"email": "dias@example.com",
+"endereco": "santa maria"
 }
 
+=======================================================
+LISTAR TODOS OS USUÁRIOS
+=======================================================
 ###
-#Solicita todos os aventureiros
-GET http://localhost:3000/aventureiro HTTP/1.1
+GET http://localhost:3000/usuarios
 
+=======================================================
+BUSCAR USUÁRIO POR ID
+=======================================================
 ###
-#solicita um aventureiro pelo seu ID
-GET http://localhost:3000/aventureiro/2 HTTP/1.1
+GET http://localhost:3000/usuarios/1
 
+=======================================================
+ATUALIZAR UM USUÁRIO POR ID
+=======================================================
 ###
-# Faz a atualização de um aventureiro
+PUT http://localhost:3000/usuarios/1
 
-PUT http://localhost:3000/aventureiro/2 HTTP/1.1
 Content-Type: application/json
 
 {
-    "nome": "Antonio, o Mago"
+"nome": "Yasmim Dias",
+"email": "dias@example.com
+"
 }
 
+=======================================================
+DELETAR USUÁRIO POR ID
+=======================================================
 ###
-#Exclui um aventureiro
-DELETE http://localhost:3000/aventureiro/12 HTTP/1.1
+DELETE http://localhost:3000/usuarios/1
 
+=======================================================
+CRIAR CARTÃO PARA UM USUÁRIO
+=======================================================
 ###
-GET http://localhost:3000/guilda HTTP/1.1
+POST http://localhost:3000/cartoes
+
+Content-Type: application/json
+
+{
+"usuario_id": 2,
+"numero": "5555 4444 3333 2222",
+"cvv": "789",
+"validade": "09/29"
+}
+
+=======================================================
+LISTAR TODOS OS CARTÕES
+=======================================================
+###
+GET http://localhost:3000/cartoes
+
+=======================================================
+LISTAR USUÁRIOS COM SEUS CARTÕES (JOIN)
+=======================================================
+###
+GET http://localhost:3000/usuarios-com-cartoes
